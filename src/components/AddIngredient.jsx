@@ -6,18 +6,15 @@ export default function AddIngredient() {
 		return ingredients.map((ingredient) => <li className="mb-1">{ingredient}</li>);
 	};
 
-	function handleSubmit(event) {
-		event.preventDefault();
-		const formData = new FormData(event.currentTarget);
+	function submitIngredient(formData) {
 		const newIngredient = formData.get("ingredient");
 		setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
-		event.currentTarget.reset();
 	}
 
 	return (
 		<main className="px-8 pt-2.5 flex flex-col justify-start">
 			<section id="add ingredients form">
-				<form onSubmit={handleSubmit} className="add-ingredient-form">
+				<form action={submitIngredient} className="add-ingredient-form">
 					<input className="add-ingredient-form-input" type="text" placeholder="e.g. oregano" aria-label="Add ingredient" name="ingredient" />
 					<button className="add-ingredient-form-button cursor-pointer">Add ingredient</button>
 				</form>
