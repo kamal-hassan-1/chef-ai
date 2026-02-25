@@ -24,7 +24,7 @@ export default function AddIngredient() {
 			</section>
 			{ingredients.length != 0 && (
 				<section className="m-10">
-					<h2 className="text-2xl sm:text-3xl font-semibold mt-1">Ingredients on hand:</h2>
+					<h2 className="text-2xl sm:text-3xl font-semibold">Ingredients on hand:</h2>
 					<ul className="text-gray-600 text-[1rem] list-disc ml-6 mt-2.5">{populateIngredientsListItems()}</ul>
 				</section>
 			)}
