@@ -4,9 +4,7 @@ export default function App() {
 	return (
 		<>
 			<Header />
-			<main>
-				<AddIngredient />
-			</main>
+			<AddIngredient />
 		</>
 	);
 }
