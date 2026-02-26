@@ -30,7 +30,7 @@ export default function AddIngredient() {
 							<h3 className="text-[1.125rem] font-medium leading-6 mb-2">Ready for a recipe?</h3>
 							<p className="text-[#6B7280] text-[0.875rem] leading-5">Generate a recipe from your list of ingredients.</p>
 						</div>
-						<button className="border-none rounded-md bg-[#D17557] shadow-sm text-[#FAFAF8] px-4 py-2.5 text-[0.875rem] cursor-pointer">Get a recipe</button>
+						<button className="border-none rounded-md bg-[#D17557] shadow-sm text-[#FAFAF8] ml-2 sm:ml-0 px-4 py-2.5 text-[0.875rem] cursor-pointer">Get a recipe</button>
 					</div>
 				</section>
 			)}
