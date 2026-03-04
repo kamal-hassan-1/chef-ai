@@ -39,7 +39,7 @@ export default function AddIngredient() {
 						<ul className="text-gray-600 text-[0.875rem] list-disc ml-6 mt-2.5">{populateIngredientsListItems()}</ul>
 					</div>
 					{ingredients.length > 2 && (
-						<div className="generate-recipe-container flex justify-between items-center rounded-lg bg-[#F0EFEB] px-7 py-3 mt-9">
+						<div className="generate-recipe-container flex justify-between items-center rounded-lg bg-[#F0EFEB] px-7 py-4 mt-9">
 							<div>
 								<h3 className="text-[1.125rem] font-medium leading-6 mb-2">Ready for a recipe?</h3>
 								<p className="text-[#6B7280] text-[0.875rem] leading-5">Generate a recipe from your list of ingredients.</p>
@@ -54,15 +54,15 @@ export default function AddIngredient() {
 
 			{/* Section 3 - Chef Response */}
 			{recipeShown && (
-				<section>
-					<h2>Chef Claude Recommends:</h2>
-					<article className="suggested-recipe-container" aria-live="polite">
-						<p>
+				<section className="mt-9">
+					<h2 className="text-2xl font-semibold mb-4">Chef Claude Recommends:</h2>
+					<article className="suggested-recipe-container bg-[#F0EFEB] rounded-lg p-6 border-l-4  border-[#D17557]" aria-live="polite">
+						<p className="text-gray-700 mb-4">
 							Based on the ingredients you have available, I would recommend making a simple a delicious <strong>Beef Bolognese Pasta</strong>. Here is the recipe:
 						</p>
-						<h3>Beef Bolognese Pasta</h3>
-						<strong>Ingredients:</strong>
-						<ul>
+						<h3 className="text-xl font-semibold mb-3 text-[#D17557]">Beef Bolognese Pasta</h3>
+						<strong className="block text-sm font-semibold mt-4 mb-2">Ingredients:</strong>
+						<ul className="list-disc ml-6 mb-4 text-gray-700 space-y-1">
 							<li>1 lb. ground beef</li>
 							<li>1 onion, diced</li>
 							<li>3 cloves garlic, minced</li>
@@ -74,8 +74,8 @@ export default function AddIngredient() {
 							<li>Salt and pepper to taste</li>
 							<li>8 oz pasta of your choice (e.g., spaghetti, penne, or linguine)</li>
 						</ul>
-						<strong>Instructions:</strong>
-						<ol>
+						<strong className="block text-sm font-semibold mt-4 mb-2">Instructions:</strong>
+						<ol className="list-decimal ml-6 text-gray-700 space-y-2">
 							<li>Bring a large pot of salted water to a boil for the pasta.</li>
 							<li>In a large skillet or Dutch oven, cook the ground beef over medium-high heat, breaking it up with a wooden spoon, until browned and cooked through, about 5-7 minutes.</li>
 							<li>Add the diced onion and minced garlic to the skillet and cook for 2-3 minutes, until the onion is translucent.</li>
