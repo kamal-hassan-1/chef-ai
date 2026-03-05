@@ -1,6 +1,7 @@
 //--------------------------------------------------- IMPORTS -----------------------------------------------------------------
 import React from "react";
 import Recipe from "./Recipe";
+import IngredientList from "./IngredientList";
 
 //-------------------------------------------------- COMPONENT ----------------------------------------------------------------
 
@@ -11,7 +12,13 @@ export default function AddIngredient() {
 	// -------------------------------------------------- FUNCTIONS ----------------------------------------------------------------
 
 	const populateIngredientsListItems = () => {
-		return ingredients.map((ingredient) => <li className="mb-1">{ingredient}</li>);
+		return ingredients.map((ingredient) => (
+			<li
+				className="mb-1"
+				key={ingredient}>
+				{ingredient}
+			</li>
+		));
 	};
 
 	function submitIngredient(formData) {
@@ -44,10 +51,7 @@ export default function AddIngredient() {
 
 			{ingredients.length > 0 && (
 				<section>
-					<div id="ingredient-list-container">
-						<h2 className="text-2xl sm:text-3xl font-semibold">Ingredients on hand:</h2>
-						<ul className="text-gray-600 text-[0.875rem] list-disc ml-6 mt-2.5">{populateIngredientsListItems()}</ul>
-					</div>
+					<IngredientList populateIngredientsListItems={populateIngredientsListItems} />
 					{ingredients.length > 2 && (
 						<div className="generate-recipe-container flex justify-between items-center rounded-lg bg-[#F0EFEB] px-7 py-4 mt-9">
 							<div>
