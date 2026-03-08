@@ -1,10 +1,10 @@
-import AddIngredient from "./components/AddIngredient";
 import Header from "/src/components/Header";
+import Main from "/src/Main";
 export default function App() {
 	return (
 		<>
 			<Header />
-			<AddIngredient />
+			<Main />
 		</>
 	);
 }
